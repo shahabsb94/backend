@@ -55,6 +55,7 @@ pipeline {
             }
             steps{
                 build job: 'backend-cd', parameters: [string(name: 'version', value: "${appVersion}")], wait: true
+                echo "Version is: $appVersion"
             }
         }
     }
